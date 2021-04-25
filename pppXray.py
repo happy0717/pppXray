@@ -4,6 +4,7 @@ import time
 import os
 import click
 import config
+import winsound
 
 @click.command()
 @click.option('-r', '--readfile',default='target.txt',help='xray批量扫描读取文件名,按行读取',type=str)
@@ -51,6 +52,7 @@ def pppGet():
             pass
     f.close()
     print("Xray Scan End~")
+    winsound.Beep(600,5000)
     return
 
 def main():
